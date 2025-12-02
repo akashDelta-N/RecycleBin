@@ -1,0 +1,26 @@
+{
+  "nodeModulesDir": "auto",
+  "tasks": {
+    "start": "deno run --allow-read=. --allow-net=adventofcode.com index.ts",
+    "scaffold": "deno run --allow-read=. --allow-write=./days index.ts --scaffold",
+    "test": "deno test"
+  },
+  "imports": {
+    "std/": "https://deno.land/std@0.208.0/"
+  },
+  "lint": {
+    "include": ["days/"],
+    "rules": {
+      "tags": ["recommended"],
+    }
+  },
+  "fmt": {
+    "useTabs": true,
+    "lineWidth": 120,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "include": ["days/"]
+  }
+}
