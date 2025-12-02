@@ -8,7 +8,7 @@ var 文作 = String
 
 //第一問：
 export const p1 = (入文: 文): 數 => {
-  const 行列: 文列 = 入文.splitRows().map(文作);
+  const 行列: 文列 = 裂列(入文);
   let 零計 = 0;
   let 此位 = 50;
   行列.forEach(文 => {
@@ -30,7 +30,7 @@ export const p1 = (入文: 文): 數 => {
 
 //第二問：
 export const p2 = (入文: 文): 數 => {
-  const 行列 = 入文.splitRows().map(文作);
+  const 行列 = 裂列(入文);
   return 0;
 }
 
@@ -52,4 +52,8 @@ export const 取字 = (文: 文, 位: 數): 文 => {
 
 export const 取後 = (文: 文, 位: 數): 文 => {
   return 文.slice(位);
+}
+
+export const 裂列 = (文: 文, 數?: 數): 文列 => {
+  return 文.splitRows(數).map(文作);
 }
